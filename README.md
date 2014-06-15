@@ -25,7 +25,7 @@ Usage
 -----
 
 Although (thanks to UMD) also usable in a stand-alone fashion in
-AMD, CommonJS and Browser environments, Thenable is primarily
+AMD, CommonJS and Browser environments, **Thenable** is primarily
 intended for embedding into dependency-free libraries and
 frameworks. Hence, it is neither published to the Node NPM registry
 nor to the Bower registry. Instead, please download the raw
