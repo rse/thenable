@@ -17,7 +17,7 @@ Abstract
 This is a strictly-compliant [Promises/A+](http://promisesaplus.com/)
 1.1.1 implementation in just 2KB of (compressed) code, which passes the [official Promises/A+
 Test-Suite](https://github.com/promises-aplus/promises-tests)
-and includes back-references to the relevant specification statements.
+and includes [back-references to the relevant specification statements](https://github.com/rse/thenable/blob/master/thenable.js).
 It just provides a minimum Promise functionality, because it is intended
 to be directly *embedded* into ECMAScript 5 based libraries and
 frameworks, in order to dependency-free leverage from Promises and be
