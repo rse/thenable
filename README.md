@@ -24,13 +24,60 @@ Promise library like [Bluebird](https://github.com/petkaantonov/bluebird) instea
 Usage
 -----
 
-As Thenable is intended for embedding into dependency-free libraries and
-frameworks, it is neither published to the Node NPM registry
-nor to the Bower registry. Instead, please download the
-raw [thenable.min.js](https://raw.githubusercontent.com/rse/thenable/master/thenable.min.js)
-and include it verbatim into your library/framework.
-Inside your library/framework use `var Promise = Thenable.noConflict()`
-to retrieve the code without polluting the global namespace.
+Although (thanks to UMD) also usable in a stand-alone fashion in
+AMD, CommonJS and Browser environments, Thenable is primarily
+intended for embedding into dependency-free libraries and
+frameworks. Hence, it is neither published to the Node NPM registry
+nor to the Bower registry. Instead, please download the raw
+[thenable.min.js](https://raw.githubusercontent.com/rse/thenable/master/
+thenable.min.js) and include it verbatim into your library/framework.
+The usual approach for this is to temporarily emulate a CommonJS
+environment within your library/framework to get its `Thenable` object:
+
+```js
+var Thenable = (function () {
+    var module = { exports: {} };
+    /* --- START VERBATIM EMBEDDEDING ---- */
+/*!
+**  Thenable -- Embeddable Minimum Strictly-Compliant Promises/A+ 1.1.1 Thenable
+**  Copyright (c) 2013-2014 Ralf S. Engelschall <http://engelschall.com>
+**  Licensed under The MIT License <http://opensource.org/licenses/MIT>
+**  Source-Code distributed under <http://github.com/rse/thenable>
+*/
+!function[...]
+    /* --- END VERBATIM EMBEDDEDING ---- */
+    return module.exports;
+})();
+```
+
+Then to use `Thenable` you can do either...
+
+
+```js
+myAsyncMethod = function () {
+    var promise = new Thenable();
+    doAsyncOperation(function onResult (result) {
+        promise.fulfill(result);
+    }, function onError (error) {
+        promise.reject(result);
+    })
+    return promise.proxy();
+};
+```
+
+...or the EMCAScript 6 style...
+
+```js
+myAsyncMethod = function () {
+    return new Thenable(function (fulfill, reject) {
+        doAsyncOperation(function onResult (result) {
+            fulfill(result);
+        }, function onError (error) {
+            reject(result);
+        })
+    }).proxy();
+};
+```
 
 Features
 --------
