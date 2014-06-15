@@ -45,7 +45,7 @@ environment within your library/framework to get its `Thenable` object:
 ```js
 var Thenable = (function () {
     var module = { exports: {} };
-    /* --- START VERBATIM EMBEDDEDING ---- */
+    /* --- START VERBATIM EMBEDDING ---- */
 /*!
 **  Thenable -- Embeddable Minimum Strictly-Compliant Promises/A+ 1.1.1 Thenable
 **  Copyright (c) 2013-2014 Ralf S. Engelschall <http://engelschall.com>
@@ -53,7 +53,7 @@ var Thenable = (function () {
 **  Source-Code distributed on <http://github.com/rse/thenable>
 */
 !function[...]
-    /* --- END VERBATIM EMBEDDEDING ---- */
+    /* --- END VERBATIM EMBEDDING ---- */
     return module.exports;
 })();
 ```
