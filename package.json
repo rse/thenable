@@ -1,0 +1,36 @@
+{
+    "name":        "thenable",
+    "homepage":    "http://github.com/rse/thenable",
+    "description": "Embeddable Minimum Strictly-Compliant Promises/A+ 1.1.1 Thenable",
+    "version":     "1.0.0",
+    "license":     "MIT",
+    "author": {
+        "name":    "Ralf S. Engelschall",
+        "email":   "rse@engelschall.com",
+        "url":     "http://engelschall.com"
+    },
+    "keywords": [
+        "Promise", "Thenable"
+    ],
+    "repository": {
+        "type": "git",
+        "url":  "git://github.com/rse/thenable.git"
+    },
+    "bugs": {
+        "url":  "http://github.com/rse/thenable"
+    },
+    "devDependencies": {
+        "grunt":                "~0.4.5",
+        "grunt-cli":            "~0.1.13",
+        "grunt-contrib-jshint": "~0.10.0",
+        "grunt-contrib-uglify": "~0.5.0",
+        "grunt-contrib-clean":  "~0.5.0",
+        "grunt-eslint":         "~0.5.0",
+        "promises-aplus-tests": "~2.0.4"
+    },
+    "dependencies" : {
+    },
+    "engines": {
+        "node":                 ">=0.10.0"
+    }
+}
