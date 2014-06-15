@@ -2,6 +2,11 @@
 Thenable
 ========
 
+<a href="http://promisesaplus.com/" style="float: right;">
+    <img src="http://promisesaplus.com/assets/logo-small.png" alt="Promises/A+ logo"
+        title="Promises/A+ 1.1 compliant" align="right"/>
+</a>
+
 Embeddable Minimum Strictly-Compliant Promises/A+ 1.1.1 Thenable<br/>
 Copyright (c) 2013-2014 Ralf S. Engelschall (http://engelschall.com)<br/>
 Licensed under The MIT License (http://opensource.org/licenses/MIT)
