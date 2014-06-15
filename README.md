@@ -10,7 +10,7 @@ Abstract
 --------
 
 This is a strictly-compliant [Promises/A+](http://promisesaplus.com/)
-1.1.1 implementation, which passes the [official Promises/A+
+1.1.1 implementation in just 2KB of code, which passes the [official Promises/A+
 Test-Suite](https://github.com/promises-aplus/promises-tests). It just
 provides a minimum Promise functionality, because it is intended to be
 directly *embedded* into ECMAScript 5 based libraries and frameworks, in
@@ -27,7 +27,7 @@ Usage
 Although (thanks to UMD) also usable in a stand-alone fashion in
 AMD, CommonJS and Browser environments, **Thenable** is primarily
 intended for embedding into dependency-free libraries and
-frameworks. Hence, it is neither published to the Node NPM registry
+frameworks. Hence, it intentionally is neither published to the Node NPM registry
 nor to the Bower registry. Instead, please download the raw
 [thenable.min.js](https://raw.githubusercontent.com/rse/thenable/master/
 thenable.min.js) and include it verbatim into your library/framework.
