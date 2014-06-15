@@ -37,8 +37,8 @@ AMD, CommonJS and Browser environments, **Thenable** is primarily
 intended for embedding into dependency-free libraries and
 frameworks. Hence, it intentionally is neither published to the Node NPM registry
 nor to the Bower registry. Instead, please download the raw
-[thenable.min.js](https://raw.githubusercontent.com/rse/thenable/master/
-thenable.min.js) and include it verbatim into your library/framework.
+[thenable.min.js](https://raw.githubusercontent.com/rse/thenable/master/thenable.min.js) 
+and include it verbatim into your library/framework.
 The usual approach for this is to temporarily emulate a CommonJS
 environment within your library/framework to get its `Thenable` object:
 
