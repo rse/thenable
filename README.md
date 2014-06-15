@@ -21,6 +21,17 @@ management functionalities. For applications (and similar contexts where
 extra dependencies do not matter), please use a full-featured
 Promise library like [Bluebird](https://github.com/petkaantonov/bluebird) instead.
 
+Usage
+-----
+
+As Thenable is intended for embedding into dependency-free libraries and
+frameworks, it is neither published to the Node NPM registry
+nor to the Bower registry. Instead, please download the
+raw [thenable.min.js](https://raw.githubusercontent.com/rse/thenable/master/thenable.min.js)
+and include it verbatim into your library/framework.
+Inside your library/framework use `var Promise = Thenable.noConflict()`
+to retrieve the code without polluting the global namespace.
+
 Features
 --------
 
