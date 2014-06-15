@@ -90,4 +90,5 @@ Features
 - additional Promise Proxy support
 - additional Constructor Executor support
 - permissive MIT license
+- just 2KB of code
 
