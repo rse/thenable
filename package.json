@@ -10,7 +10,7 @@
         "url":     "http://engelschall.com"
     },
     "keywords": [
-        "Promise", "Thenable"
+        "Promise", "Thenable", "promises-aplus"
     ],
     "repository": {
         "type": "git",
