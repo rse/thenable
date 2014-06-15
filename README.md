@@ -42,7 +42,7 @@ var Thenable = (function () {
 **  Thenable -- Embeddable Minimum Strictly-Compliant Promises/A+ 1.1.1 Thenable
 **  Copyright (c) 2013-2014 Ralf S. Engelschall <http://engelschall.com>
 **  Licensed under The MIT License <http://opensource.org/licenses/MIT>
-**  Source-Code distributed under <http://github.com/rse/thenable>
+**  Source-Code distributed on <http://github.com/rse/thenable>
 */
 !function[...]
     /* --- END VERBATIM EMBEDDEDING ---- */
