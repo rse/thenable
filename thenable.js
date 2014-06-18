@@ -28,7 +28,8 @@
         })();
 }(this, "Thenable", function (/* root */) {
 
-    /*  helper functions to reduce (compressed) code size  */
+    /*  helper functions to reduce (compressed) code size, do not use on
+        variables that are not declared. */
     var isObject = function (v) { return typeof v === "object";   };
     var isFunc   = function (v) { return typeof v === "function"; };
 
@@ -117,9 +118,9 @@
         };
 
         /*  execute procedure asynchronously  */                     /*  [Promises/A+ 2.2.4, 3.1]  */
-        if (isObject(process) && isFunc(process.nextTick))
+        if (typeof process === "object" && isFunc(process.nextTick))
             process.nextTick(func);
-        else if (isFunc(setImmediate))
+        else if (typeof setImmediate === "function")
             setImmediate(func);
         else
             setTimeout(func, 0);
