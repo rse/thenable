@@ -40,7 +40,7 @@
             return new api(executor);
 
         /*  initialize object  */
-        this.id           = "Thenable/1.0.2";
+        this.id           = "Thenable/1.0.3";
         this.state        = STATE_PENDING; /*  initial state  */
         this.fulfillValue = undefined;     /*  initial value  */     /*  [Promises/A+ 1.3, 2.1.2.2]  */
         this.rejectReason = undefined;     /*  initial reason */     /*  [Promises/A+ 1.5, 2.1.3.2]  */
