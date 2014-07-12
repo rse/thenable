@@ -27,7 +27,7 @@ and no general Promise management functionalities. For applications (and
 similar contexts where extra dependencies do not matter), please use a
 full-featured Promise library like [Bluebird](https://github.com/petkaantonov/bluebird)
 or any of the [other Promise/A+ compliant
-implementations](https://github.com/promises-aplus/promises-spec/blob/master/implementations.md) 
+implementations](https://github.com/promises-aplus/promises-spec/blob/master/implementations.md)
 instead.
 
 Usage
