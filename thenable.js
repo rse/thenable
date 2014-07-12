@@ -47,7 +47,12 @@
         this.onFulfilled  = [];            /*  initial handlers  */
         this.onRejected   = [];            /*  initial handlers  */
 
-        /*  optionally support executor function  */
+        /*  provide optional information-hiding proxy  */
+        this.proxy = {
+            then: this.then.bind(this)
+        };
+
+        /*  support optional executor function  */
         if (typeof executor === "function")
             executor.call(this, this.fulfill.bind(this), this.reject.bind(this));
     };
@@ -67,12 +72,7 @@
             curr.onRejected.push(
                 resolver(onRejected,  next, "reject" ));             /*  [Promises/A+ 2.2.3/2.2.6]  */
             execute(curr);
-            return next;                                             /*  [Promises/A+ 2.2.7, 3.3]  */
-        },
-
-        /*  optional promise information-hiding proxy generation  */
-        proxy: function () {
-            return { then: this.then.bind(this) };
+            return next.proxy;                                       /*  [Promises/A+ 2.2.7, 3.3]  */
         }
     };
 
@@ -141,7 +141,7 @@
     /*  "Promise Resolution Procedure"  */                           /*  [Promises/A+ 2.3]  */
     var resolve = function (promise, x) {
         /*  sanity check arguments  */                               /*  [Promises/A+ 2.3.1]  */
-        if (promise === x) {
+        if (promise === x || promise.proxy === x) {
             promise.reject(new TypeError("cannot resolve promise with itself"));
             return;
         }
