@@ -99,7 +99,7 @@
         "curly": [0, "all"],
         "default-case": 0,
         "dot-notation": 2,
-        "eol-last": 2,
+        "eol-last": 0,
         "eqeqeq": 2,
         "func-names": 0,
         "func-style": [0, "declaration"],
