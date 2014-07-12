@@ -78,7 +78,7 @@
 
     /*  deliver an action  */
     var deliver = function (curr, state, name, value) {
-        if (curr.state === STATE_PENDING) {  
+        if (curr.state === STATE_PENDING) {
             curr.state = state;                                      /*  [Promises/A+ 2.1.2.1, 2.1.3.1]  */
             curr[name] = value;                                      /*  [Promises/A+ 2.1.2.2, 2.1.3.2]  */
             execute(curr);
@@ -99,7 +99,7 @@
         /* global process: true */
         /* global setImmediate: true */
         /* global setTimeout: true */
-        
+
         /*  short-circuit processing  */
         if (curr[name].length === 0)
             return;
@@ -128,7 +128,7 @@
                 next[method].call(next, value);                      /*  [Promises/A+ 2.2.7.3, 2.2.7.4]  */
             else {
                 var result;
-                try { result = cb(value); }                          /*  [Promises/A+ 2.2.2.1, 2.2.3.1, 2.2.5, 3.2]  */ 
+                try { result = cb(value); }                          /*  [Promises/A+ 2.2.2.1, 2.2.3.1, 2.2.5, 3.2]  */
                 catch (e) {
                     next.reject(e);                                  /*  [Promises/A+ 2.2.7.2]  */
                     return;
@@ -151,7 +151,7 @@
         var then;
         if ((typeof x === "object" && x !== null) || typeof x === "function") {
             try { then = x.then; }                                   /*  [Promises/A+ 2.3.3.1, 3.5]  */
-            catch (e) { 
+            catch (e) {
                 promise.reject(e);                                   /*  [Promises/A+ 2.3.3.2]  */
                 return;
             }
@@ -165,16 +165,16 @@
                 /*  call retrieved "then" method */                  /*  [Promises/A+ 2.3.3.3]  */
                 then.call(x,
                     /*  resolvePromise  */                           /*  [Promises/A+ 2.3.3.3.1]  */
-                    function (y) { 
+                    function (y) {
                         if (resolved) return; resolved = true;       /*  [Promises/A+ 2.3.3.3.3]  */
                         if (y === x)                                 /*  [Promises/A+ 3.6]  */
-                            promise.reject(new TypeError("circular thenable chain"));  
+                            promise.reject(new TypeError("circular thenable chain"));
                         else
                             resolve(promise, y);
                     },
 
                     /*  rejectPromise  */                            /*  [Promises/A+ 2.3.3.3.2]  */
-                    function (r) { 
+                    function (r) {
                         if (resolved) return; resolved = true;       /*  [Promises/A+ 2.3.3.3.3]  */
                         promise.reject(r);
                     }
@@ -187,7 +187,7 @@
             return;
         }
 
-        /*  handle other values  */                               
+        /*  handle other values  */
         promise.fulfill(x);                                          /*  [Promises/A+ 2.3.4, 2.3.3.4]  */
     };
 
