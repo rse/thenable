@@ -157,7 +157,7 @@
             }
         }
 
-        /*  handle own eThenables   [Promises/A+ 2.3.2]
+        /*  handle own Thenables    [Promises/A+ 2.3.2]
             and similar "thenables" [Promises/A+ 2.3.3]  */
         if (typeof then === "function") {
             var resolved = false;
