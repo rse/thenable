@@ -70,7 +70,7 @@ myAsyncMethod = function () {
     }, function onError (error) {
         promise.reject(result);
     })
-    return promise.proxy();
+    return promise.proxy;
 };
 ```
 
@@ -84,7 +84,7 @@ myAsyncMethod = function () {
         }, function onError (error) {
             reject(result);
         })
-    }).proxy();
+    }).proxy;
 };
 ```
 
