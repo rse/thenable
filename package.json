@@ -25,7 +25,7 @@
         "grunt-contrib-jshint": "~0.10.0",
         "grunt-contrib-uglify": "~0.6.0",
         "grunt-contrib-clean":  "~0.6.0",
-        "grunt-eslint":         "~1.1.0",
+        "grunt-eslint":         "~2.0.0",
         "promises-aplus-tests": "~2.1.0"
     },
     "dependencies" : {

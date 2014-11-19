@@ -46,6 +46,7 @@
         "no-loop-func": 0,
         "no-mixed-requires": [0, false],
         "no-multi-str": 2,
+        "no-multi-spaces": 0,
         "no-native-reassign": 2,
         "no-negated-in-lhs": 2,
         "no-nested-ternary": 0,
@@ -89,6 +90,7 @@
         "no-wrap-func": 2,
         "no-mixed-spaces-and-tabs": [2, false],
 
+        "key-spacing": 0,
         "block-scoped-var": 0,
         "brace-style": [0, "1tbs"],
         "camelcase": 0,
