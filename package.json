@@ -2,7 +2,7 @@
     "name":        "thenable",
     "homepage":    "http://github.com/rse/thenable",
     "description": "Embeddable Minimum Strictly-Compliant Promises/A+ 1.1.1 Thenable",
-    "version":     "1.0.7",
+    "version":     "1.0.8",
     "license":     "MIT",
     "author": {
         "name":    "Ralf S. Engelschall",
