@@ -22,11 +22,11 @@
     "devDependencies": {
         "grunt":                "~0.4.5",
         "grunt-cli":            "~0.1.13",
-        "grunt-contrib-jshint": "~0.10.0",
-        "grunt-contrib-uglify": "~0.6.0",
-        "grunt-contrib-clean":  "~0.6.0",
-        "grunt-eslint":         "~2.0.0",
-        "promises-aplus-tests": "~2.1.0"
+        "grunt-contrib-jshint": "~0.11.3",
+        "grunt-contrib-uglify": "~0.11.0",
+        "grunt-contrib-clean":  "~0.7.0",
+        "grunt-eslint":         "~17.3.1",
+        "promises-aplus-tests": "~2.1.1"
     },
     "dependencies" : {
     },
